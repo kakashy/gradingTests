@@ -1,7 +1,8 @@
-import java.util.Scanner;  // Import the Scanner class
-import java.io.File;  // Import the File class
+import java.util.Scanner; // Import the Scanner class
+import java.io.File; // Import the File class
+import java.io.FileWriter;
 import java.io.IOException;  // Import the IOException class to handle errors
-import java.io.FileWriter;   // Import the FileWriter class
+import java.io.BufferedWriter;   // Import the BufferedWriter class
 
 class major {
   /**
@@ -47,12 +48,18 @@ class major {
       // Saving the data into the file
       try {
         final File deyra = new File("report.txt");
-        final FileWriter myWriter = new FileWriter("report.txt");
-        myWriter.write("Full names: " + firstName + " " + secondName);
+        final BufferedWriter myWriter = new BufferedWriter(new FileWriter(firstName + "report.txt", true)); //The file can be written several times
+        myWriter.write("Full Names: " + firstName + " " + secondName);
+        myWriter.newLine();
         myWriter.write("Mathematics: " + mathematics);
+        myWriter.newLine();
         myWriter.write("English: " + english);
+        myWriter.newLine();
         myWriter.write("Kiswahili: " + kiswahili);
+        myWriter.newLine();
         myWriter.write("TOTALS: " + totals + "/300");
+        myWriter.newLine();
+        myWriter.newLine();
         myWriter.close();
         
         System.out.println("Successfully wrote to the file. And it's saved at: " + deyra.getName());
