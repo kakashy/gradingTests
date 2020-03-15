@@ -48,7 +48,8 @@ class major {
       // Saving the data into the file
       try {
         final File deyra = new File("report.txt");
-        final BufferedWriter myWriter = new BufferedWriter(new FileWriter(firstName + "report.txt", true)); //The file can be written several times
+        final BufferedWriter myWriter = new BufferedWriter(new FileWriter(firstName + "students/report.txt", true)); //The file can be written several times
+        myWriter.getParentFile().mkdirs();
         myWriter.write("Full Names: " + firstName + " " + secondName);
         myWriter.newLine();
         myWriter.write("Mathematics: " + mathematics);
