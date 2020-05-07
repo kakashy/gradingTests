@@ -48,7 +48,7 @@ class major {
       // Saving the data into the file
       try {
         final File deyra = new File("report.txt");
-        final BufferedWriter myWriter = new BufferedWriter(new FileWriter(firstName + "students/report.txt", true)); //The file can be written several times
+        final BufferedWriter myWriter = new BufferedWriter(new FileWriter("report.txt", true)); //The file can be written several times
         myWriter.write("Full Names: " + firstName + " " + secondName);
         myWriter.newLine();
         myWriter.write("Mathematics: " + mathematics);
@@ -62,7 +62,7 @@ class major {
         myWriter.newLine();
         myWriter.close();
         
-        System.out.println("Successfully wrote to the file. And it's saved at: " + deyra.getName());
+        System.out.println("Successfully wrote to the file. And it's saved at: " + deyra.getAbsolutePath());
       } catch (final IOException e) {
         System.out.println("An error occurred.");
         e.printStackTrace();

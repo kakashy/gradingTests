@@ -12,22 +12,22 @@ public class App {
         final String secondName = new Scanner(System.in).nextLine();
 
         System.out.println("Mathematics:");
-        int mathematics = new Scanner(System.in).nextInt();
+        final int mathematics = new Scanner(System.in).nextInt();
 
         System.out.println("Kiswahili:");
-        int kiswahili = new Scanner(System.in).nextInt();
+        final int kiswahili = new Scanner(System.in).nextInt();
 
         System.out.println("English:");
-        int english = new Scanner(System.in).nextInt();
+        final int english = new Scanner(System.in).nextInt();
 
         System.out.println("Biology:");
-        int biology = new Scanner(System.in).nextInt();
+        final int biology = new Scanner(System.in).nextInt();
 
         System.out.println("Physics:");
-        int physics = new Scanner(System.in).nextInt();
+        final int physics = new Scanner(System.in).nextInt();
 
         System.out.println("Chemistry:");
-        int chemistry = new Scanner(System.in).nextInt();
+        final int chemistry = new Scanner(System.in).nextInt();
         }
 
     public int mathematics;
