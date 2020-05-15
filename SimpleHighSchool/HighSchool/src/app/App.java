@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 
 public class App {
+    String Jina = "nox";
     public static void main(final String[] args) throws Exception {
         System.out.println("First Name:");
         final String firstName = new Scanner(System.in).nextLine();
@@ -33,26 +34,3 @@ public class App {
     public int mathematics;
 }
 
-class Grades extends App {
-    public void mathGrade(final String[] args) throws Exception {
-		if (mathematics >= 70) {
-            final String mathGrade = "A";
-            final Byte mathPts = 12;
-            System.out.println(mathGrade);
-        } else {
-            if (mathematics >= 65) {
-                final String mathGrade = "A-";
-                final Byte mathPts = 11;
-            } else if (mathematics >= 50) {
-                final String mathGrade = "B";
-            System.out.println("Waaaaaauz");
-        }
-        else {
-            System.out.println("Wheew");
-        }
-        }
-    }
-
-	public Grades() {
-	}
-}
